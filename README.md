@@ -1,2 +1,2 @@
 # CS257-Work
-All the code written/worked on during Winter of my Junior Year in the class Software Design
+Within this repository contains all my work from CS257 (Software Design) during the Winter Term of my Junior Year
