@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-basketball, football, watching football/basketball, watching netflix, listening to music, hanging out with friends and family, playing video games, and obviously computer programming, fish flinging.
-=======
-basketball, football, watching football/basketball, watching netflix, listening to music, hanging out with friends and family, playing video games, obviously computer programming, recently picked up opera singing, and underwater basketbal weaving.
->>>>>>> 3ad8c35adcb4c2274dbf4cff0f405e7d932f9fcf
+basketball, football, watching football/basketball, watching netflix, listening to music, hanging out with friends and family, playing video games, obviously computer programming, recently picked up opera singing, and underwater basket weaving.
