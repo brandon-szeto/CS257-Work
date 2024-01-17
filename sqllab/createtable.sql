@@ -18,5 +18,5 @@ CREATE TABLE earthquakes (
   magError text, 
   magNst text,
   locationSource text,
-  magSource text,
+  magSource text
 );
