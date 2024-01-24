@@ -50,4 +50,5 @@ def create_table():
     conn.commit()
     #return row
 
-    create_table()
+
+create_table()
