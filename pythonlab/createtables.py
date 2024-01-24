@@ -36,7 +36,7 @@ def create_table():
     cur.execute( sql2 )
 
     # fetchone() returns one row that matches your quer
-    row = cur.fetchone()
+    #row = cur.fetchone()
 
     # Note: We could access individual items in the row
     # That is, row[0] would be the name column in the previous example
@@ -48,5 +48,6 @@ def create_table():
     #Then we need the following command to finalize our changes
 
     conn.commit()
-    
-    return row
+    #return row
+
+    create_table()
