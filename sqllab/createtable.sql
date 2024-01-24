@@ -20,3 +20,4 @@ CREATE TABLE earthquakes (
   locationSource text,
   magSource text
 );
+
