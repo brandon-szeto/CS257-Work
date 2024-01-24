@@ -19,7 +19,7 @@ def create_table():
             CREATE TABLE us_cities (
                 City text,
                 State text, 
-                Population real,
+                Population integer,
                 lat real,
                 lon real
             );
