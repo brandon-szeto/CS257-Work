@@ -161,8 +161,7 @@ def query_state_pop(conn):
 
 
 
-conn = test_connection
-test_connection()
+conn = test_connection()
 query_northfield(conn)
 query_population_max(conn)
 query_population_min(conn)
