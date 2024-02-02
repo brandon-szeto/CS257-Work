@@ -1,3 +1,4 @@
+#Brandon Szeto written code
 from pickle import NONE
 import psycopg2
 # This function sends an SQL query to the database
