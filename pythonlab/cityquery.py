@@ -139,7 +139,7 @@ def get_full_name(conn, state_input):
 def query_state_pop(conn):
     state_input = input("Please enter a state name or abbreviation that you would like to know the population of:")
     cur = conn.cursor()
-    sql = "SELECT Population FROM state_abv WHERE abbreviation = %s"
+    sql = "SELECT Population FROM us_cities WHERE State = %s"
     cur.execute(sql, (state_input,))
     abbreviation_exists = cur.fetchone()[0]
 
