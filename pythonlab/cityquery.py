@@ -15,8 +15,9 @@ def test_connection():
     else:
         print( "Problem with Connection" )
 
-    return None
+    return conn
 
+    
 #This sees if Northfield is within the database, if it is it will print its latitude and longitude
 #If it isn't, it will print a message saying Northfield is not in the database
 def query_northfield(conn):
