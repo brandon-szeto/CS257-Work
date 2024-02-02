@@ -55,7 +55,7 @@ def query_population_max(conn):
     row = cur.fetchone()
 
     if row:
-        print("The city with the biggest population is: ", row[0])
+        print("The city with the biggest population is:", row[0])
     else:
         #This message should never pop up
         print("There is no city with the biggest population")
@@ -72,7 +72,7 @@ def query_population_min(conn):
     row = cur.fetchone()
 
     if row:
-        print("The city with the smallest population is: ", row[0])
+        print("The city with the smallest population is:", row[0])
     else:
         #This message should never pop up
         print("There is no city with the smallest population")
@@ -96,22 +96,22 @@ def query_farthest_cities(conn):
     cur.execute(sql_west)
     row_west = cur.fetchone()
     if row_north:
-        print("The furthest north city is: ", row_north[0])
+        print("The furthest north city is:", row_north[0])
     else:
         print("No city found.")
 
     if row_south:
-        print("The furthest south city is: ", row_south[0])
+        print("The furthest south city is:", row_south[0])
     else:
         print("No city found.")
     
     if row_east:
-        print("The furthest east city is: ", row_east[0])
+        print("The furthest east city is:", row_east[0])
     else:
         print("No city found.")
 
     if row_west:
-        print("The furthest west city is: ", row_west[0])
+        print("The furthest west city is:", row_west[0])
     else:
         print("No city found.")
 
@@ -137,9 +137,9 @@ def get_full_name(conn, state_input):
 
 
 def query_state_pop(conn):
-    state_input = input("Please enter a state name or abbreviation that you would like to know the population of: ")
+    state_input = input("Please enter a state name or abbreviation that you would like to know the population of:")
     cur = conn.cursor()
-    sql = "SELECT Population FROM us_cities WHERE Abbreviation = %s"
+    sql = "SELECT Population FROM us_cities WHERE abbreviation = %s"
     cur.execute(sql, (state_input,))
     abbreviation_exists = cur.fetchone()[0]
 
@@ -165,6 +165,7 @@ conn = test_connection()
 query_northfield(conn)
 query_population_max(conn)
 query_population_min(conn)
+query_farthest_cities(conn)
 query_state_pop(conn)
 
 
