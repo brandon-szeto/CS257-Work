@@ -17,7 +17,7 @@ def test_connection():
 
     return conn
 
-    
+
 #This sees if Northfield is within the database, if it is it will print its latitude and longitude
 #If it isn't, it will print a message saying Northfield is not in the database
 def query_northfield(conn):
@@ -161,12 +161,12 @@ def query_state_pop(conn):
 
 
 
-
+conn = test_connection
 test_connection()
-query_northfield()
-query_population_max()
-query_population_min()
-query_state_pop()
+query_northfield(conn)
+query_population_max(conn)
+query_population_min(conn)
+query_state_pop(conn)
 
 
 
