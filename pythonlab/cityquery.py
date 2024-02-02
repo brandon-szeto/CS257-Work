@@ -1,3 +1,4 @@
+from pickle import NONE
 import psycopg2
 # This function sends an SQL query to the database
 def test_connection():
@@ -141,21 +142,20 @@ def query_state_pop(conn):
     cur = conn.cursor()
     sql = "SELECT Population FROM us_cities WHERE State = %s"
     cur.execute(sql, (state_input,))
-    abbreviation_exists = cur.fetchone()[0]
-
-    if abbreviation_exists:
-        full_state_name = get_full_name(conn, state_input)
-    else:
-        full_state_name = state_input
-
+    cur_check = cur.fetchall()
+    if cur_check == []:
+        state_input = get_full_name(conn, state_input)
+        if state_input == NONE:
+            print("What you entered is not a valid state.")
+    
     sql_pop = "SELECT SUM(population) FROM us_cities WHERE State = %s"
-    cur.execute(sql_pop, (full_state_name,))
+    cur.execute(sql_pop, (state_input,))
     total_population = cur.fetchone()[0]
 
     if total_population:
-        print(f"Total population of all cities in {full_state_name}: {total_population}")
+        print(f"Total population of all cities in {state_input}: {total_population}")
     else:
-        print(f"No population data found for {full_state_name}")
+        print(f"No population data found for {state_input}")
 
     cur.close()
 
